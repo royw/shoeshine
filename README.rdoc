@@ -1,0 +1,7 @@
+= shoeshine
+
+Description goes here.
+
+== Copyright
+
+Copyright (c) 2009 Roy Wright. See LICENSE for details.
