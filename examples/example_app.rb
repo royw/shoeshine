@@ -5,6 +5,7 @@ Shoes.setup do
 end
 
 require File.join(File.dirname(__FILE__), '..', 'lib', 'shoeshine')
+$:.push(File.join(File.dirname(__FILE__)))
 
 require 'nav'
 require 'action'
