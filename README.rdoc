@@ -1,6 +1,30 @@
 = shoeshine
 
-Description goes here.
+This is a collection of UI elements for shoes (http://shoooes.net).
+
+The collection currently includes:
+
+* UnorderedList is an unordered lists with various bullets
+* ListItems is a handy wrapper for placing things in the list
+* DropDownMenu is an inplace drop down menu that can serve as popup menus
+* An example application to show them off with
+
+TODOs include:
+* ordered lists
+* horizontal lists
+* toolbar (horizontal list of icons)
+* maybe a menubar
+
+Usage
+
+  # examples/example.app.rb
+
+A Big THANK YOU to Matt Payne for slimtimeronshoes which pointed
+me in the right direction for structuring shoes applications.
+
+
+Enjoy,
+Roy
 
 == Copyright
 
