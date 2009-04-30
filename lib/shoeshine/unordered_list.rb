@@ -19,14 +19,34 @@ class UnorderedList < List
   #   :background => app.background argument
   # }
   def show(opts={})
-    list_options = {:margin_bottom => 10}.merge(@list_opts.merge(opts)) unless opts.nil?
+    show_options = {:margin_bottom => 10}.merge(@list_opts.merge(opts)) unless opts.nil?
 
-    app.stack(list_options) do
-      @list_items.each do |item|
-        item.app = app
-        item.show @list_opts
+    orientation = show_options[:orientation]
+    orientation = :vertical if orientation.nil?
+    case orientation.to_sym
+    when :vertical
+      app.stack(show_options) do
+        @list_items.each do |item|
+          item.app = app
+          app.flow do
+            item.show @list_opts
+          end
+        end
       end
+    when :horizontal
+      app.flow(show_options) do
+        @list_items.each do |item|
+          item.app = app
+          app.stack(:width => 80) do
+            item.show @list_opts
+          end
+        end
+      end
+    else
+      app.error "Invalid orientation value: '#{orientation.to_s}'"
     end
   end
 
+  def show_items
+  end
 end

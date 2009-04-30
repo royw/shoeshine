@@ -2,6 +2,7 @@ require 'shoeshine/widget'
 
 class UnorderedListWidget
   include Widget
+  include Nav
 
   def initialize
   end
@@ -22,6 +23,12 @@ class UnorderedListWidget
         list_two({:bullet => List::STAR_BULLET})
         list_two({:bullet => List::PLUS_BULLET})
       end
+      app.stack(opt) do
+        list_horizontal({})
+        list_horizontal({:bullet => List::CIRCLE_BULLET})
+        list_horizontal({:bullet => List::STAR_BULLET})
+        list_horizontal({:bullet => List::PLUS_BULLET})
+      end
     end
   end
 
@@ -39,6 +46,19 @@ class UnorderedListWidget
     app.stack({:width => 80}) do
       list = UnorderedList.new(app, options)
       %w(alpha bravo charlie delta echo foxtrot).each do |item|
+        list.add(ListItem.new(item, :click => lambda{alert("#{item} clicked")}))
+      end
+      list.show
+    end
+  end
+
+  def list_horizontal(options)
+    app.stack do
+      list = UnorderedList.new(app, options.merge(:orientation => :horizontal, :width => '100%'))
+      %w(alpha bravo charlie).each do |item|
+        list.add(ListItem.new(item))
+      end
+      %w(delta echo foxtrot).each do |item|
         list.add(ListItem.new(item, :click => lambda{alert("#{item} clicked")}))
       end
       list.show

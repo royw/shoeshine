@@ -5,8 +5,6 @@ $:.push(File.join(File.dirname(__FILE__)))
 # require 'singleton'
 # require 'ruby-debug'
 
-puts "shoeshine"
-
 require 'shoeshine/widget'
 require 'shoeshine/list'
 require 'shoeshine/list_item'
