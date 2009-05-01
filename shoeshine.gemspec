@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{shoeshine}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Roy Wright"]
-  s.date = %q{2009-04-30}
+  s.date = %q{2009-05-01}
   s.email = %q{roy@wright.org}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -24,19 +24,18 @@ Gem::Specification.new do |s|
     "examples/example_app.rb",
     "examples/index_action.rb",
     "examples/index_widget.rb",
+    "examples/list_action.rb",
+    "examples/list_widget.rb",
     "examples/nav.rb",
     "examples/ordered_list_action.rb",
     "examples/ordered_list_widget.rb",
     "examples/page_widget.rb",
     "examples/title_widget.rb",
-    "examples/unordered_list_action.rb",
-    "examples/unordered_list_widget.rb",
     "lib/shoeshine.rb",
     "lib/shoeshine/drop_down_menu.rb",
     "lib/shoeshine/horizontal_rule.rb",
     "lib/shoeshine/list.rb",
     "lib/shoeshine/list_item.rb",
-    "lib/shoeshine/unordered_list.rb",
     "lib/shoeshine/widget.rb",
     "spec/drop_down_menu_spec.rb",
     "spec/spec_helper.rb"
@@ -52,17 +51,17 @@ Gem::Specification.new do |s|
     "spec/drop_down_menu_spec.rb",
     "examples/example_app.rb",
     "examples/dd_menu_action.rb",
+    "examples/list_action.rb",
     "examples/nav.rb",
     "examples/title_widget.rb",
     "examples/dd_menu_widget.rb",
-    "examples/unordered_list_action.rb",
     "examples/ordered_list_widget.rb",
     "examples/ordered_list_action.rb",
     "examples/index_action.rb",
+    "examples/list_widget.rb",
     "examples/index_widget.rb",
     "examples/page_widget.rb",
     "examples/action.rb",
-    "examples/unordered_list_widget.rb",
     "examples/command_widget.rb"
   ]
 
