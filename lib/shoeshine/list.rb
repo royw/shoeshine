@@ -67,6 +67,7 @@ class List
     end
   end
 
+  protected
 
   def self.star_image(app)
     app.image IMAGE_SIZE, IMAGE_SIZE do
