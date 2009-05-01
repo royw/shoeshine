@@ -11,8 +11,7 @@ require 'nav'
 require 'action'
 require 'dd_menu_action'
 require 'index_action'
-require 'ordered_list_action'
-require 'unordered_list_action'
+require 'list_action'
 
 class ListExample < Shoes
   include Nav
@@ -42,8 +41,7 @@ class ListExample < Shoes
 
   # define our pages
   page_def INDEX_PAGE,          :index,           IndexAction
-  page_def UNORDERED_LIST_PAGE, :ul,              UnorderedListAction
-  page_def ORDERED_LIST_PAGE,   :ol,              OrderedListAction
+  page_def LIST_PAGE,           :list,            ListAction
   page_def DROP_DOWN_MENU_PAGE, :drop_down_menu,  DropDownMenuAction
 
   private

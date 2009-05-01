@@ -1,13 +1,13 @@
 require 'action'
 require 'nav'
-require 'unordered_list_widget'
+require 'list_widget'
 
-class UnorderedListAction < Action
+class ListAction < Action
   include Nav
 
   def initialize
     super
-    @widget = UnorderedListWidget.new
+    @widget = ListWidget.new
   end
 
   def execute()

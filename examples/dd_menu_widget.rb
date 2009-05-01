@@ -12,7 +12,8 @@ class DDMenuWidget
       app.para "Both columns close the menu when the mouse leaves it."
       app.flow do
         app.stack(:width => 100) do
-          list = UnorderedList.new(app)
+          app.para "right click"
+          list = List.new(app)
           numbers = %w(one two three four five).collect do |item|
             ListItem.new(item,
                         :click => lambda{alert("#{item} was clicked")})
@@ -27,9 +28,11 @@ class DDMenuWidget
                                   ))
           end
           list.show
+          app.rect(90, 0, 1, 180)
         end
         app.stack(:width => 100) do
-          list = UnorderedList.new(app)
+          app.para 'hover'
+          list = List.new(app)
           numbers = %w(six seven eight nine).collect do |item|
             ListItem.new(item,
                         :click => lambda{alert("#{item} was clicked")})

@@ -1,6 +1,8 @@
 class HorizontalRule
   include Widget
 
+  attr_accessor :counter
+
   def initialize(opts={})
     @options = opts
     @options ||= {}
